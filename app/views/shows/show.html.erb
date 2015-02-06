@@ -1,8 +1,11 @@
-<p> Concert details </p>
+<p> Concert details: </p>
 
 <%= @show.description %>
 <br>
+<br>
 <%= @show.venue %>
-		<br>
-		<br>
-		<%= @show.description %>
+<br>
+<br>
+<br>
+<p><%= link_to("New", new_show_path) %></p>
+ <p><%= link_to("Shows", shows_path) %></p>

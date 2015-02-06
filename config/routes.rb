@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-  get '/' => 'site#home'
+  get '/' => 'shows#home'
+  
   resources :shows do
  
 

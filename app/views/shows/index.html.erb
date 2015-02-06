@@ -11,7 +11,7 @@
 		<%= show.date %>
 		
 		<br>
-		<%= link_to("details", show/:id_path ) %>
+		<%= link_to("details", show_path(show.id) ) %>
 		<br>
 		<br>
 
@@ -19,4 +19,5 @@
 	<% end %>
 </ul>
 
-<p> <p><%= link_to("New", new_show_path) %></p>
+ <p><%= link_to("New", new_show_path) %></p>
+ <p><%= link_to("Shows", shows_path) %></p>

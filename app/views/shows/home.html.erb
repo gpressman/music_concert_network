@@ -1,0 +1,18 @@
+
+<div class= "container">
+	<div class="sidebar">
+		
+			<% @this_month.each do |show| %>
+			<%= link_to("#{show.artist}", show_path(show.id) ) %>
+			<%= show.date %>
+			<br>
+			<br>
+
+<% end %>
+	</div>
+		<p>Today's concerts </p>
+		<% @todays_shows.each do  |show| %>
+		<%= link_to("#{show.artist}", show_path(show.id) ) %>
+		<%= show.date %>
+
+<% end %>

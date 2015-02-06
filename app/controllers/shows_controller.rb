@@ -3,11 +3,20 @@ class ShowsController < ApplicationController
 		where(id: id).first
 	end
 
+	def home
+		@date= DateTime.now.utc
+		@todays_shows=Show.where(date: @date.beginning_of_day..@date.end_of_day)
+		@this_month= Show.where(date: @date.beginning_of_month..@date.end_of_month)
+	end
+		
+	
+		
+	
 
 	def index
 		@shows=Show.all
 		if @shows.empty?
-		render 'no_project_found'
+		# render 'no_project_found'
 		end
 	end
 
@@ -30,7 +39,7 @@ class ShowsController < ApplicationController
 	def create 
 		@show=Show.new show_params
 		if @show.save
-			redirect_to 'index'
+			redirect_to '/shows'
 		else 
 			render 'new'
 		end
