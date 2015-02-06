@@ -1,0 +1,22 @@
+
+<ul> 
+	<% @shows.each do |show| %>
+
+	<li><%= show.artist %> 
+		<br>
+		in 
+		<%= show.city %>
+		<br>
+		on
+		<%= show.date %>
+		
+		<br>
+		<%= link_to("details", show/:id_path ) %>
+		<br>
+		<br>
+
+	 </li>
+	<% end %>
+</ul>
+
+<p> <p><%= link_to("New", new_show_path) %></p>
