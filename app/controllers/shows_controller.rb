@@ -1,4 +1,6 @@
 class ShowsController < ApplicationController
+	
+
 	def self.show_find(id)
 		where(id: id).first
 	end
