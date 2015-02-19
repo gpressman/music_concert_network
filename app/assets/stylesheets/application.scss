@@ -11,6 +11,16 @@
  * file per style scope.
  *
  */
- 
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.sidebar {
+	float: right;
+
+}
+
+.footer-row {
+	border-style: solid;
+	border-width: 2px;
+}

@@ -18,5 +18,20 @@
 <br>
 <br>
 <br>
-<footer><%= link_to("Add a show", new_show_path) %> <%=link_to("Concerts", shows_path) %> <%=link_to("Home", home_path) %> </footer>
+<footer>
+	<div class="container footer-container">
+		<div class="row footer-row">
+			<div class="col-sm-2">
+		<%= link_to("Add a show", new_show_path) %> 
+			</div>
+			<div class="col-sm-2">
+		<%=link_to("Concerts", shows_path) %> 
+			</div>
+			<div class="col-sm-2">
+		<%=link_to("Home", home_path) %> 
+			</div>
+		</div>
+	</div>
+</footer>
+
 </html>
