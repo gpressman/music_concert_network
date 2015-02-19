@@ -3,8 +3,12 @@
 	<div class="sidebar">
 		
 			<% @this_month.each do |show| %>
-			<%= link_to("#{show.artist}", show_path(show.id) ) %>
-			<%= show.date %>
+			<%= show.date.strftime("%B %d, %Y at %I:%M%p") %>
+			<br>
+			<%= link_to("#{show.artist}", show_path(show.id)) %>
+			<br>
+			<%= show.venue %> in <%= show.city %>
+			
 			<br>
 			<br>
 
@@ -13,7 +17,7 @@
 		<p>Today's concerts </p>
 		<% @todays_shows.each do  |show| %>
 		<%= link_to("#{show.artist}", show_path(show.id) ) %>
-		<%= show.date %>
+		<%= show.date.strftime("%B %d, %Y at %I:%M%p") %>
 
 <% end %>
 

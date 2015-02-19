@@ -15,6 +15,11 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.header-div {
+	text-align: center;
+	font-size: 1.5em;
+}
+
 .sidebar {
 	float: right;
 
@@ -23,4 +28,23 @@
 .footer-row {
 	border-style: solid;
 	border-width: 2px;
+}
+
+html, body {
+  height: 100%;
+}
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -142px; 
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+.site-footer, .page-wrap:after {
+  height: 142px; 
+}
+.site-footer {
+  background: #3ac88b;
 }
